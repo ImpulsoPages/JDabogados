@@ -149,7 +149,7 @@
             </div>
         </section>
         
- <!-- Nuestras Alianzas Section - MOVIDA Y TEXTO ACTUALIZADO -->
+    <!-- Nuestras Alianzas Section - MOVIDA Y TEXTO ACTUALIZADO -->
         <section id="alliances" class="py-16 md:py-20 bg-gray-100">
             <div class="container mx-auto px-4 md:px-6 max-w-5xl">
                 <h2 class="text-3xl md:text-4xl font-bold text-primary-blue mb-12 text-center">Nuestras Alianzas Estratégicas</h2>
@@ -163,7 +163,7 @@
                     <div class="flex justify-center space-x-10 mb-10 border-b pb-6 border-gray-100">
                         <!-- Logo Instagram -->
                         <a href="https://www.instagram.com/marchenaconsultores/" target="_blank" rel="noopener noreferrer" 
-                           class="flex flex-col items-center group transform hover:scale-105 transition duration-300 p-2 rounded-lg">
+                            class="flex flex-col items-center group transform hover:scale-105 transition duration-300 p-2 rounded-lg">
                             <!-- Instagram SVG Icon -->
                             <svg class="w-8 h-8 md:w-10 md:h-10 text-pink-600 group-hover:text-pink-700 transition duration-300" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fill-rule="evenodd" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.148 3.227-1.668 4.77-4.919 4.919-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-3.251-.149-4.771-1.691-4.919-4.919-.058-1.265-.07-1.646-.07-4.85s.012-3.584.07-4.85C2.39 3.93 3.91 2.38 7.15.232 8.416.175 8.796.163 12 .163m0-2.02c-3.264 0-3.66.014-4.944.072C2.69 0.301.233 2.69.072 7.056.014 8.34 0 8.736 0 12s.014 3.66.072 4.944c.161 4.366 2.618 6.824 7.056 6.984 1.284.058 1.68.072 4.944.072s3.66-.014 4.944-.072c4.438-.16 6.895-2.618 7.056-7.056.058-1.284.072-1.68.072-4.944s-.014-3.66-.072-4.944C23.77.301 21.314.072 16.944.014 15.66 0 15.264 0 12 0m0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324M12 16.2a4.2 4.2 0 1 1 0-8.4 4.2 4.2 0 0 1 0 8.4m6.406-11.845a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0" clip-rule="evenodd"/>
@@ -173,7 +173,7 @@
 
                         <!-- Logo Sitio Web (Usando un ícono de enlace/código) -->
                         <a href="https://pipemarchena.github.io/marchenaasesoresyconsultores/" target="_blank" rel="noopener noreferrer" 
-                           class="flex flex-col items-center group transform hover:scale-105 transition duration-300 p-2 rounded-lg">
+                            class="flex flex-col items-center group transform hover:scale-105 transition duration-300 p-2 rounded-lg">
                             <!-- Globe/Website SVG Icon -->
                             <svg class="w-8 h-8 md:w-10 md:h-10 text-primary-blue group-hover:text-blue-600 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m6 10l-2-7m2 7l4 2 4-2m-4-7V3m-7 4h14"></path>
@@ -224,23 +224,34 @@
             <div class="container mx-auto px-6">
                 <div class="grid md:grid-cols-2 gap-16">
                     
-                    <!-- Formulario de Contacto -->
+                    <!-- Formulario de Contacto (MODIFICADO) -->
                     <div>
                         <h3 class="text-3xl font-bold mb-6">Contáctenos</h3>
-                        <form action="mailto:contacto@jaimedaza.com" method="post" enctype="text/plain">
+                        <!-- Formulario con ID para manejo por JavaScript -->
+                        <form id="contact-form" method="POST"> 
+                            <!-- Campo oculto requerido por FormSubmit para la dirección de destino -->
+                            <input type="hidden" name="_subject" value="Nuevo Mensaje de Contacto - Jaime Daza Abogados">
+
                             <div class="mb-5">
                                 <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Nombre:</label>
-                                <input type="text" id="name" name="Nombre" class="w-full p-3 rounded-md border border-gray-600 bg-gray-900 bg-opacity-30 text-white focus:ring-white focus:border-white" placeholder="Su Nombre Completo">
+                                <input type="text" id="name" name="Nombre" class="w-full p-3 rounded-md border border-gray-600 bg-gray-900 bg-opacity-30 text-white focus:ring-white focus:border-white" placeholder="Su Nombre Completo" required>
                             </div>
                             <div class="mb-5">
                                 <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Correo Electrónico:</label>
-                                <input type="email" id="email" name="Email" class="w-full p-3 rounded-md border border-gray-600 bg-gray-900 bg-opacity-30 text-white focus:ring-white focus:border-white" placeholder="su.email@ejemplo.com">
+                                <input type="email" id="email" name="Email" class="w-full p-3 rounded-md border border-gray-600 bg-gray-900 bg-opacity-30 text-white focus:ring-white focus:border-white" placeholder="su.email@ejemplo.com" required>
                             </div>
                             <div class="mb-5">
                                 <label for="message" class="block text-gray-300 text-sm font-bold mb-2">Mensaje:</label>
-                                <textarea id="message" name="Mensaje" rows="5" class="w-full p-3 rounded-md border border-gray-600 bg-gray-900 bg-opacity-30 text-white focus:ring-white focus:border-white" placeholder="Describa su consulta..."></textarea>
+                                <textarea id="message" name="Mensaje" rows="5" class="w-full p-3 rounded-md border border-gray-600 bg-gray-900 bg-opacity-30 text-white focus:ring-white focus:border-white" placeholder="Describa su consulta..." required></textarea>
                             </div>
-                            <button type="submit" class="w-full bg-white text-primary-blue py-3 rounded-lg hover:bg-gray-200 transition duration-300 font-semibold text-lg">Enviar Mensaje</button>
+                            
+                            <!-- Área de mensajes y carga -->
+                            <div id="form-message" class="text-center py-3 text-lg font-semibold min-h-[40px] mb-4"></div>
+
+                            <button type="submit" id="submit-btn" class="w-full bg-white text-primary-blue py-3 rounded-lg shadow-lg hover:bg-gray-200 transition duration-300 font-semibold text-lg flex items-center justify-center">
+                                <span id="btn-text">Enviar Mensaje</span>
+                                <div id="loader" class="hidden h-5 w-5 border-2 border-primary-blue border-t-white rounded-full animate-spin ml-3"></div>
+                            </button>
                         </form>
                     </div>
                     
@@ -250,14 +261,14 @@
                         
                         <!-- Botón de WhatsApp - NUEVO -->
                         <a href="https://wa.me/573013815915" target="_blank" rel="noopener noreferrer" 
-                           class="inline-flex items-center space-x-3 text-lg font-bold bg-green-500 text-white px-6 py-3 rounded-xl shadow-2xl hover:bg-green-600 transition duration-300 transform hover:scale-[1.02] mb-8">
+                            class="inline-flex items-center space-x-3 text-lg font-bold bg-green-500 text-white px-6 py-3 rounded-xl shadow-2xl hover:bg-green-600 transition duration-300 transform hover:scale-[1.02] mb-8">
                             <span class="text-2xl">💬</span>
                             <span>Escríbanos por WhatsApp</span>
                         </a>
                         
                         <h4 class="text-xl font-bold mt-8 mb-4">Otras Redes</h4>
                         <a href="https://www.instagram.com/jdabogadosco/" target="_blank" rel="noopener noreferrer" 
-                           class="inline-flex items-center space-x-3 text-lg text-white font-semibold hover:text-gray-300 transition duration-300">
+                            class="inline-flex items-center space-x-3 text-lg text-white font-semibold hover:text-gray-300 transition duration-300">
                             <!-- Icono SVG de Instagram -->
                             <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                                 <path fill-rule="evenodd" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.148 3.227-1.668 4.77-4.919 4.919-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-3.251-.149-4.771-1.691-4.919-4.919-.058-1.265-.07-1.646-.07-4.85s.012-3.584.07-4.85C2.39 3.93 3.91 2.38 7.15.232 8.416.175 8.796.163 12 .163m0-2.02c-3.264 0-3.66.014-4.944.072C2.69 0.301.233 2.69.072 7.056.014 8.34 0 8.736 0 12s.014 3.66.072 4.944c.161 4.366 2.618 6.824 7.056 6.984 1.284.058 1.68.072 4.944.072s3.66-.014 4.944-.072c4.438-.16 6.895-2.618 7.056-7.056.058-1.284.072-1.68.072-4.944s-.014-3.66-.072-4.944C23.77.301 21.314.072 16.944.014 15.66 0 15.264 0 12 0m0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324M12 16.2a4.2 4.2 0 1 1 0-8.4 4.2 4.2 0 0 1 0 8.4m6.406-11.845a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0" clip-rule="evenodd"/>
@@ -325,6 +336,66 @@
             const casesPage = document.getElementById('cases-page');
             const showCasesBtn = document.getElementById('show-cases-btn');
             const backToMainBtn = document.getElementById('back-to-main-btn');
+
+            // --- Lógica del Formulario de Contacto (NUEVA) ---
+            const form = document.getElementById('contact-form');
+            const submitBtn = document.getElementById('submit-btn');
+            const btnText = document.getElementById('btn-text');
+            const loader = document.getElementById('loader');
+            const formMessage = document.getElementById('form-message');
+            
+            // Función para cambiar el estado del botón y la interfaz
+            const setFormState = (isLoading, message = '', isSuccess = false) => {
+                submitBtn.disabled = isLoading;
+                btnText.textContent = isLoading ? 'Enviando...' : 'Enviar Mensaje';
+                loader.classList.toggle('hidden', !isLoading);
+                
+                formMessage.textContent = message;
+                formMessage.classList.remove('text-red-400', 'text-green-400');
+                if (message) {
+                    formMessage.classList.add(isSuccess ? 'text-green-400' : 'text-red-400');
+                }
+            };
+
+
+            form.addEventListener('submit', async (e) => {
+                e.preventDefault();
+                setFormState(true, ''); // Inicia el estado de carga y borra mensajes anteriores
+
+                // Utiliza la URL AJAX de FormSubmit, la forma más limpia para enviar sin API key
+                // y sin redirección visible.
+                const endpoint = "https://formsubmit.co/ajax/jdcenter94@gmail.com";
+                const formData = new FormData(form);
+
+                try {
+                    const response = await fetch(endpoint, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json' // Clave para usar el endpoint AJAX
+                        }
+                    });
+
+                    // NOTA: FormSubmit requiere una primera confirmación manual en el correo
+                    // jdcenter94@gmail.com antes de que funcione automáticamente.
+                    // Esto es inevitable para servicios gratuitos sin autenticación.
+                    if (response.ok) {
+                        setFormState(false, '✅ ¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.', true);
+                        form.reset();
+                    } else {
+                        // Intenta obtener el error si es posible, si no, usa un mensaje genérico
+                        const errorData = await response.json();
+                        console.error('Error al enviar el formulario:', errorData);
+                        setFormState(false, '❌ Error al enviar. Intente de nuevo más tarde.', false);
+                    }
+                } catch (error) {
+                    console.error('Error de red o inesperado:', error);
+                    setFormState(false, '❌ Error de conexión. Verifique su red.', false);
+                }
+            });
+
+
+            // --- Lógica de la Página de Casos de Éxito (ANTERIOR) ---
 
             // Función para mostrar la página de casos de éxito
             showCasesBtn.addEventListener('click', () => {
